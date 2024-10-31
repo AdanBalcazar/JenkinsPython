@@ -1,5 +1,5 @@
 FROM python:3.9
 
-COPY . .
+COPY code.py .
 
-CMD ["python3", "-m", "unittest", "ExperimentTest.py"]
+CMD ["python3", "code.py"]
