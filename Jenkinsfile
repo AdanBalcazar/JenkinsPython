@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     //cualquier sh que vean, en windows es bat
-                    sh 'docker build -t imagendepruebas -f Dockerfile.test . && docker run imagendepruebas'
+                    sh 'docker build -t imagentestpython -f Dockerfile.test . && docker run imagentestpython'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     //cualquier sh que vean, en windows es bat
-                    sh 'docker build -t adanbrooks27/imagendesdejenkinsjs -f Dockerfile.build .'
+                    sh 'docker build -t adanbrooks27/imagenbuildpython -f Dockerfile.build .'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     //cualquier sh que vean, en windows es bat
-                    sh 'docker push toony1908/imagendesdejenkinsjs'
+                    sh 'docker push adanbrooks27/imagenbuildpython'
                 }
             }
         }
